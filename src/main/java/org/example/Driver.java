@@ -9,6 +9,7 @@ public class Driver {
 
 		try {
 			pgd.addClass("WordCount", WordCount.class, "A map/reduce program that counts the words in the input files");
+			pgd.addClass("WordCount1char", WordCount1char.class, "");
 			pgd.driver(args);
 			exitCode = 0;
 		} catch (Throwable e) {
