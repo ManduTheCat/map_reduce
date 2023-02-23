@@ -22,11 +22,10 @@ public class WordCount1char {
 		public void map(Object key, Text val, Context context) throws IOException, InterruptedException {
 			StringTokenizer st = new StringTokenizer(val.toString());
 			while (!st.hasMoreTokens()) {
-				word.set(st.nextToken().substring(0, 1)); // 한개만 가져와서 내보낸다.
-				// 첫번째 캐릭터만 키로나간다.
+				word.set(st.nextToken().substring(0, 1));
+				//한글자만 가져와서 키값으로 보넨다
 				context.write(word, one);
 			}
-
 		}
 
 	}
